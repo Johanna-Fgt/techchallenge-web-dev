@@ -50,6 +50,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 2rem;
+  background-color: #F7F7F7;
 }
 
 header .logo {
@@ -118,7 +119,8 @@ header .open {
 }
 
 #hero .parallax {
-  height: 70vh;
+  height: 65vh;
+  width: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

@@ -40,7 +40,7 @@ header{
   justify-content: space-around;
   align-items: center;
   padding: 0 2rem;
-  
+  background-color: $color-light;
   .logo{
     width: 100%;
     padding: 1rem;
@@ -87,7 +87,8 @@ header{
     color: white;
   }
   .parallax {
-    height: 70vh;
+    height: 65vh;
+    width: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
