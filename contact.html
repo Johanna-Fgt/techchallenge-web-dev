@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>The Royal Kingdom of Colchis</title>
+    <link href="style.scss" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="./index.html"><h3>The Royal Kingdom of Colchis<h3><a>
+        <button
+            id="nav-toggle"
+            aria-label="Toggle navigation"
+            onclick="toggleNav()"
+          >
+            <i class="fa fa-bars hide"></i>
+        </button>
+      </div>
+      <nav id="navigation">
+        <ul>
+          <li>
+            <a href="./index.html">About</a>
+          </li>
+          <li>
+            <a href="./royal-family.html">Royal Family</a>
+          </li>
+          <li>
+            <a href="./assets.html">Royal Assets</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Contact the Royal Kingdom -->
+    <section id="contact">
+      <div class="contact">
+          <h2>Contact the Royal Kingdom</h2>
+          <p>Fill in the form below to contact the Royal Kingdom</p>
+      </div>
+      <form>
+        <label for="firstname">Firstname</label><br>
+        <input type="text" id="firstname" name="firstname" placeholder="Johanna" maxlength="30"><br>
+
+        <label for="lastname">Lastname</label><br>
+        <input type="text" id="lastname" name="lastname" placeholder="JFgt" maxlength="30"><br>
+
+        <label for="email">Email</label><br>
+        <input type="text" id="email" name="email" placeholder="...@gmail.com" maxlength="30"><br>
+
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message" rows="15" cols="30" maxlength="800" placeholder="Your message ..." maxlength="30"></textarea><br>
+
+        <input type="submit" value="Submit" class="submit-btn">
+      </form>
+    </section>
+
+    <!-- Connect the Javascript file -->
+    <script src="script.js"></script>
+  </body>
+</html>

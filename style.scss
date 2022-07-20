@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+  font-family: 'Poppins', sans-serif;
+  a{
+    text-decoration: none;
+    color: black;
+    &:hover{
+      font-weight: bold;
+    }
+    &:visited{
+      color: black;
+    }
+  }
+}
+
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  .logo{
+    width: 100%;
+    margin-left: 2rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    h3{
+      width: 30%;
+    }
+  }
+  nav{
+    transform: translateY(-10%);
+    transition: all 1s ease-in;
+    width: 100%;
+    text-align: center;
+    ul{
+      list-style: none;
+      flex-direction: column;
+      font-size: 1.5rem;
+      line-height: 3rem;
+    }
+    
+    .open{
+      transform: translateY(0%);
+      transition: all 1s ease-out;
+    }
+  }
+}
+
+//Hero section
+#hero{
+  margin: 10rem 0;
+  text-align: center;
+  color: white;
+  .parallax{
+    height: 70vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: url("./assets/landscape.jpg");
+    padding-top: 32vh;
+  }
+}
+//About section
+#about{
+  width: 70%;
+  margin: auto;
+  text-align: justify;
+}
+//Family section
+#family{
+  margin: 10rem 0;
+  text-align: center;
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  img{
+    width: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+  }
+}
+//Assets section
+#assets{
+  margin: 10rem 0;
+  text-align: center;
+  table{
+    width: 70%;
+    margin: auto;
+    padding: 1rem;
+    border: 2px white solid;
+    td{
+      background-color: white;
+      padding: 1rem;
+    }
+  }
+
+}
+//Contacts section
+#contact{
+  margin: 10rem 0;
+  .contact{
+    text-align: center;
+    margin: 2rem;
+  }
+  form{
+    width: 70%;
+    margin: auto;
+   input, textarea{
+     border-radius: 15px;
+     padding: 1rem;
+     margin: .5rem;
+     width: 100%;
+   }
+   .submit-btn{
+     width: fit-content;
+   }
+  }
+}
+
+//Responsive
+@media all and (min-width: 700px){
+  header{
+    height: fit-content;
+    flex-direction: row;
+    button{
+      display: none;
+    }
+    .logo{
+      width: 40%;
+      margin-left: 2rem;
+      padding: 0;
+      h3{
+        width: 100%;
+        font-size: 1rem;
+      }
+    }
+    nav{
+      transform: translateY(0%);
+      width: 100%;
+      padding: 0 1rem;
+      ul{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 1rem;
+        line-height: auto;
+      }
+    }
+  }
+  #family{
+    .container{
+      flex-direction: row;
+    }
+  }
+  #contact{
+    form{
+      width: 50%;
+    }
+  }
+}
+@media all and (max-width: 560px){
+  #assets{
+    table{
+      width: 90%;
+      padding: .5rem;
+      font-size: .5rem;
+    }
+  }
+}
