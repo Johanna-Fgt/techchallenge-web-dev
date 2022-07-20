@@ -28,7 +28,9 @@ body{
     background: rgba(232,210,179, 0.9808517156862745);
     background: linear-gradient(90deg, rgba(232,210,179,0.9808517156862745) 30%, rgba(38,87,193,1) 50%, rgba(31,168,207,1) 60%);
     -webkit-background-clip: text;
+      background-clip: text;
     -webkit-text-fill-color: transparent;
+    
   }
 }
 
@@ -56,6 +58,7 @@ header{
       background: rgba(232,210,179, 0.9808517156862745);
       background: linear-gradient(90deg, rgba(232,210,179,0.9808517156862745) 3%, rgba(38,87,193,1) 28%, rgba(31,168,207,1) 100%);
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     button{
