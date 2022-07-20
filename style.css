@@ -7,21 +7,27 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: whitesmoke;
+  background-color: #F7F7F7;
+  color: #2657C1;
   font-family: 'Poppins', sans-serif;
 }
 
 body a {
   text-decoration: none;
-  color: black;
+  color: #1FA8CF;
 }
 
 body a:hover {
   font-weight: bold;
+  color: #2657C1;
 }
 
 body a:visited {
-  color: black;
+  color: #1FA8CF;
+}
+
+body h1, body h2 {
+  color: #1FA8CF;
 }
 
 header {
@@ -43,11 +49,11 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 2rem;
 }
 
 header .logo {
   width: 100%;
-  margin-left: 2rem;
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,13 +71,24 @@ header .logo h3 {
   width: 40%;
 }
 
+header .logo button {
+  color: #2657C1;
+  border-radius: 15px;
+  padding: 1rem;
+  border: none;
+  -webkit-box-shadow: 5px 5px 15px #2657C1;
+          box-shadow: 5px 5px 15px #2657C1;
+}
+
 header nav {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
   -webkit-transition: all 1s ease-in;
   transition: all 1s ease-in;
   width: 100%;
+  padding: 2rem;
   text-align: center;
+  background-color: #F7F7F7;
 }
 
 header nav ul {
@@ -84,7 +101,7 @@ header nav ul {
   line-height: 3rem;
 }
 
-header nav .open {
+header .open {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
   -webkit-transition: all 1s ease-out;
@@ -94,6 +111,9 @@ header nav .open {
 #hero {
   margin: 10rem 0;
   text-align: center;
+}
+
+#hero h1 {
   color: white;
 }
 
@@ -104,7 +124,7 @@ header nav .open {
   background-repeat: no-repeat;
   background-size: cover;
   background: url("./assets/landscape.jpg");
-  padding-top: 32vh;
+  padding-top: 30vh;
 }
 
 #about {
@@ -129,6 +149,10 @@ header nav .open {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#family article {
+  margin: 2rem;
 }
 
 #family img {
@@ -173,12 +197,24 @@ header nav .open {
   padding: 1rem;
   margin: .5rem;
   width: 100%;
+  background-color: #e8d2b379;
 }
 
 #contact form .submit-btn {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  color: #2657C1;
+  border-radius: 15px;
+  padding: 1rem;
+  border: none;
+  -webkit-box-shadow: 5px 5px 15px #2657C1;
+          box-shadow: 5px 5px 15px #2657C1;
+}
+
+#contact form .submit-btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media all and (min-width: 700px) {

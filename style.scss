@@ -1,22 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+$color-primary: #1FA8CF;
+$color-secondary: #2657C1;
+$color-tertiary: #e8d2b379;
+$color-light: #F7F7F7;
+
 *{
   box-sizing: border-box;
 }
 body{
   margin: 0;
   padding: 0;
-  background-color: whitesmoke;
+  background-color: $color-light;
+  color: #2657C1;
   font-family: 'Poppins', sans-serif;
   a{
     text-decoration: none;
-    color: black;
+    color: $color-primary;
     &:hover{
       font-weight: bold;
+      color: $color-secondary;
     }
     &:visited{
-      color: black;
+      color: $color-primary;
     }
+  }
+  h1, h2 {
+    color: $color-primary;
   }
 }
 
@@ -29,10 +39,10 @@ header{
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding: 0 2rem;
   
   .logo{
     width: 100%;
-    margin-left: 2rem;
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -41,54 +51,68 @@ header{
     h3{
       width: 40%;
     }
+    button{
+      color: $color-secondary; 
+      border-radius: 15px;
+      padding: 1rem;
+      border: none;
+      box-shadow: 5px 5px 15px  $color-secondary;
+    }
   }
   nav{
-    transform: translateY(-100%);
+    transform: translateY(-200%);
     transition: all 1s ease-in;
     width: 100%;
+    padding: 2rem;
     text-align: center;
+    background-color: $color-light;
     ul{
       list-style: none;
       flex-direction: column;
       font-size: 1.5rem;
       line-height: 3rem;
     }
-    .open{
-      transform: translateY(0%);
-      transition: all 1s ease-out;
-    }
+  }
+  .open{
+    transform: translateY(0%);
+    transition: all 1s ease-out;
   }
 }
 
 //Hero section
-#hero{
+#hero {
   margin: 10rem 0;
   text-align: center;
-  color: white;
-  .parallax{
+  h1{
+    color: white;
+  }
+  .parallax {
     height: 70vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background: url("./assets/landscape.jpg");
-    padding-top: 32vh;
+    padding-top: 30vh;
   }
 }
 //About section
-#about{
+#about {
   width: 70%;
   margin: auto;
   text-align: justify;
 }
 //Family section
-#family{
+#family {
   margin: 10rem 0;
   text-align: center;
   .container{
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  article{
+    margin: 2rem;
   }
   img{
     width: 50%;
@@ -127,9 +151,18 @@ header{
      padding: 1rem;
      margin: .5rem;
      width: 100%;
+     background-color: $color-tertiary;
    }
    .submit-btn{
      width: fit-content;
+     color: $color-secondary; 
+      border-radius: 15px;
+      padding: 1rem;
+      border: none;
+      box-shadow: 5px 5px 15px  $color-secondary;
+     &:hover{
+      transform: scale(1.1);
+     }
    }
   }
 }
