@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+  font-family: 'Poppins', sans-serif;
+}
+
+body a {
+  text-decoration: none;
+  color: black;
+}
+
+body a:hover {
+  font-weight: bold;
+}
+
+body a:visited {
+  color: black;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo {
+  width: 100%;
+  margin-left: 2rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 10;
+}
+
+header .logo h3 {
+  width: 40%;
+}
+
+header nav {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+  width: 100%;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+
+header nav .open {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+#hero {
+  margin: 10rem 0;
+  text-align: center;
+  color: white;
+}
+
+#hero .parallax {
+  height: 70vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: url("./assets/landscape.jpg");
+  padding-top: 32vh;
+}
+
+#about {
+  width: 70%;
+  margin: auto;
+  text-align: justify;
+}
+
+#family {
+  margin: 10rem 0;
+  text-align: center;
+}
+
+#family .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#family img {
+  width: 50%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+#assets {
+  margin: 10rem 0;
+  text-align: center;
+}
+
+#assets table {
+  width: 70%;
+  margin: auto;
+  padding: 1rem;
+  border: 2px white solid;
+}
+
+#assets table td {
+  background-color: white;
+  padding: 1rem;
+}
+
+#contact {
+  margin: 10rem 0;
+}
+
+#contact .contact {
+  text-align: center;
+  margin: 2rem;
+}
+
+#contact form {
+  width: 70%;
+  margin: auto;
+}
+
+#contact form input, #contact form textarea {
+  border-radius: 15px;
+  padding: 1rem;
+  margin: .5rem;
+  width: 100%;
+}
+
+#contact form .submit-btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@media all and (min-width: 700px) {
+  header {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  header button {
+    display: none;
+  }
+  header .logo {
+    width: 40%;
+    margin-left: 2rem;
+    padding: 0;
+  }
+  header .logo h3 {
+    width: 100%;
+    font-size: 1rem;
+  }
+  header nav {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    width: 100%;
+    padding: 0 1rem;
+  }
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 1rem;
+    line-height: auto;
+  }
+  #family .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #contact form {
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 560px) {
+  #assets table {
+    width: 90%;
+    padding: .5rem;
+    font-size: .5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

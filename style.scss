@@ -29,7 +29,7 @@ header{
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  overflow: hidden;
+  
   .logo{
     width: 100%;
     margin-left: 2rem;
@@ -39,11 +39,11 @@ header{
     justify-content: space-between;
     z-index: 10;
     h3{
-      width: 30%;
+      width: 40%;
     }
   }
   nav{
-    transform: translateY(-10%);
+    transform: translateY(-100%);
     transition: all 1s ease-in;
     width: 100%;
     text-align: center;
@@ -53,7 +53,6 @@ header{
       font-size: 1.5rem;
       line-height: 3rem;
     }
-    
     .open{
       transform: translateY(0%);
       transition: all 1s ease-out;
