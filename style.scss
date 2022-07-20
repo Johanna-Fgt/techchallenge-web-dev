@@ -12,21 +12,23 @@ body{
   margin: 0;
   padding: 0;
   background-color: $color-light;
-  color: #2657C1;
+  color: $color-secondary;
   font-family: 'Poppins', sans-serif;
   a{
     text-decoration: none;
-    color: $color-primary;
     &:hover{
       font-weight: bold;
-      color: $color-secondary;
+      color: $color-secondary; 
     }
     &:visited{
       color: $color-primary;
     }
   }
   h1, h2 {
-    color: $color-primary;
+    background: rgba(232,210,179, 0.9808517156862745);
+    background: linear-gradient(90deg, rgba(232,210,179,0.9808517156862745) 30%, rgba(38,87,193,1) 50%, rgba(31,168,207,1) 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
@@ -35,21 +37,26 @@ header{
   top: 0;
   width: 100%;
   height: fit-content;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
-  padding: 0 2rem;
-  background-color: $color-light;
+  background-color: transparent;
+  z-index: 5;
   .logo{
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 10;
+    background-color: $color-light;
     h3{
       width: 40%;
+      background: rgba(232,210,179, 0.9808517156862745);
+      background: linear-gradient(90deg, rgba(232,210,179,0.9808517156862745) 3%, rgba(38,87,193,1) 28%, rgba(31,168,207,1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     button{
       color: $color-secondary; 
@@ -68,9 +75,15 @@ header{
     background-color: $color-light;
     ul{
       list-style: none;
-      flex-direction: column;
       font-size: 1.5rem;
-      line-height: 3rem;
+      li{
+        margin: 2rem;
+      }
+      a{
+        &:hover{
+          color: $color-secondary;
+        }
+      }
     }
   }
   .open{
@@ -81,20 +94,28 @@ header{
 
 //Hero section
 #hero {
-  margin: 10rem 0;
-  text-align: center;
-  h1{
-    color: white;
-  }
+  margin: 8rem 0;
   .parallax {
-    height: 65vh;
+    height: 75vh;
     width: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background: url("./assets/landscape.jpg");
+    background-image: url("./assets/landscape.jpg");
     padding-top: 30vh;
+    .blur{
+      width: 70%;
+      margin: auto;
+      padding: .5rem;
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+    h1{
+      text-align: center;
+    }
   }
 }
 //About section
@@ -102,6 +123,11 @@ header{
   width: 70%;
   margin: auto;
   text-align: justify;
+  h2{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+  }
 }
 //Family section
 #family {
@@ -167,19 +193,32 @@ header{
    }
   }
 }
+//Footer
+footer{
+  margin-top: 4rem;
+  width: 100%;
+  height: 30vh;
+  background-color: $color-tertiary;
+  text-align: center;
+  padding: 4rem 0;
+  h2{
+    font-size: 1rem;
+  }
+
+}
 
 //Responsive
 @media all and (min-width: 700px){
   header{
-    height: fit-content;
     flex-direction: row;
+    align-items: center;
     button{
       display: none;
     }
     .logo{
       width: 40%;
-      margin-left: 2rem;
-      padding: 0;
+      height: 15vh;
+      padding: 0 1rem;
       h3{
         width: 100%;
         font-size: 1rem;
@@ -187,15 +226,24 @@ header{
     }
     nav{
       transform: translateY(0%);
-      width: 100%;
-      padding: 0 1rem;
+      padding: 0;
       ul{
         display:flex;
         flex-direction: row;
         justify-content: space-around;
+        align-items: center;
+        height: 15vh; 
         font-size: 1rem;
-        line-height: auto;
+        margin: 0;
+        li{
+          margin: 0;
+        }
       }
+    }
+  }
+  #hero{
+    h1{
+      font-size: 2rem;;
     }
   }
   #family{

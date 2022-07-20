@@ -14,7 +14,6 @@ body {
 
 body a {
   text-decoration: none;
-  color: #1FA8CF;
 }
 
 body a:hover {
@@ -27,7 +26,11 @@ body a:visited {
 }
 
 body h1, body h2 {
-  color: #1FA8CF;
+  background: rgba(232, 210, 179, 0.980852);
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(232, 210, 179, 0.980852)), color-stop(50%, #2657c1), color-stop(60%, #1fa8cf));
+  background: linear-gradient(90deg, rgba(232, 210, 179, 0.980852) 30%, #2657c1 50%, #1fa8cf 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 header {
@@ -37,6 +40,7 @@ header {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,18 +48,16 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 2rem;
-  background-color: #F7F7F7;
+  background-color: transparent;
+  z-index: 5;
 }
 
 header .logo {
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -66,10 +68,16 @@ header .logo {
       -ms-flex-pack: justify;
           justify-content: space-between;
   z-index: 10;
+  background-color: #F7F7F7;
 }
 
 header .logo h3 {
   width: 40%;
+  background: rgba(232, 210, 179, 0.980852);
+  background: -webkit-gradient(linear, left top, right top, color-stop(3%, rgba(232, 210, 179, 0.980852)), color-stop(28%, #2657c1), to(#1fa8cf));
+  background: linear-gradient(90deg, rgba(232, 210, 179, 0.980852) 3%, #2657c1 28%, #1fa8cf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 header .logo button {
@@ -94,12 +102,15 @@ header nav {
 
 header nav ul {
   list-style: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   font-size: 1.5rem;
-  line-height: 3rem;
+}
+
+header nav ul li {
+  margin: 2rem;
+}
+
+header nav ul a:hover {
+  color: #2657C1;
 }
 
 header .open {
@@ -110,29 +121,45 @@ header .open {
 }
 
 #hero {
-  margin: 10rem 0;
-  text-align: center;
-}
-
-#hero h1 {
-  color: white;
+  margin: 8rem 0;
 }
 
 #hero .parallax {
-  height: 65vh;
+  height: 75vh;
   width: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background: url("./assets/landscape.jpg");
+  background-image: url("./assets/landscape.jpg");
   padding-top: 30vh;
+}
+
+#hero .parallax .blur {
+  width: 70%;
+  margin: auto;
+  padding: .5rem;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+#hero .parallax h1 {
+  text-align: center;
 }
 
 #about {
   width: 70%;
   margin: auto;
   text-align: justify;
+}
+
+#about h2 {
+  text-align: center;
+  width: 50%;
+  margin: auto;
 }
 
 #family {
@@ -219,23 +246,36 @@ header .open {
           transform: scale(1.1);
 }
 
+footer {
+  margin-top: 4rem;
+  width: 100%;
+  height: 30vh;
+  background-color: #e8d2b379;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+footer h2 {
+  font-size: 1rem;
+}
+
 @media all and (min-width: 700px) {
   header {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   header button {
     display: none;
   }
   header .logo {
     width: 40%;
-    margin-left: 2rem;
-    padding: 0;
+    height: 15vh;
+    padding: 0 1rem;
   }
   header .logo h3 {
     width: 100%;
@@ -244,8 +284,7 @@ header .open {
   header nav {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
-    width: 100%;
-    padding: 0 1rem;
+    padding: 0;
   }
   header nav ul {
     display: -webkit-box;
@@ -257,8 +296,18 @@ header .open {
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 15vh;
     font-size: 1rem;
-    line-height: auto;
+    margin: 0;
+  }
+  header nav ul li {
+    margin: 0;
+  }
+  #hero h1 {
+    font-size: 2rem;
   }
   #family .container {
     -webkit-box-orient: horizontal;
